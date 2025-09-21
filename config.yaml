@@ -1,0 +1,35 @@
+# OMR Evaluation System Configuration
+
+omr_settings:
+  total_questions: 100
+  subjects: 5
+  questions_per_subject: 20
+  answer_options: ['a', 'b', 'c', 'd']
+  error_tolerance: 0.5
+  sets: ['A', 'B']
+
+processing:
+  image_resize_width: 800
+  gaussian_blur_kernel: 5
+  threshold_method: "adaptive"
+  min_bubble_area: 50
+  max_bubble_area: 500
+  bubble_aspect_ratio_tolerance: 0.3
+
+ui_settings:
+  max_file_size_mb: 10
+  allowed_formats: ['.jpg', '.jpeg', '.png', '.pdf']
+  batch_size: 50
+
+paths:
+  sample_images: "./samples/"
+  answer_keys: "./Key (Set A and B).xlsx"
+  results: "./results/"
+  logs: "./results/logs/"
+
+subjects:
+  - "Python"
+  - "EDA" 
+  - "SQL"
+  - "POWER BI"
+  - "Statistics"
